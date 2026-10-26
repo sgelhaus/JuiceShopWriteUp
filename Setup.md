@@ -15,7 +15,9 @@ Paravirtualized adapter type
 ## Environment
 
 Mac OS host
+
 VirtualBox VM
+
 Debian 13
 
 ```
