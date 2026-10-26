@@ -2,12 +2,14 @@
 ### Goal  
 The scoreboard has been hidden from links on the Juice Shop web app. Find the URL to the scoreboard.
 ### Approach  
-To view resource that compose a web application, use the developer tools. Press F12 to open developer tools in this browser.
-In the debugger tab, choose the main.js script as a starting point. Search within this script with Ctrl + F to find instances of 'score'.
-Many results are found for 'score'. Also try 'routerLink' to locate URLs. Still there is many matches.
-With these search methods, you will stumble upon the 'score-board' routerLink. This URL has been located.  
+1. Open the web browser developer tools with F12 for this browser.
+2. Go to the debugger / sources tab.
+3. Open the Javascript resources and begin with main.js.
+4. Search within this script with Ctrl + F to find instances of 'score' or 'routerLink' to locate URLs.
+   
+You will locate the 'score-board' routerLink defined within the web application. 
 
 http://127.0.0.1:3000/#/score-board  
 
 ### Lesson Learned  
-All scripts and resources which compose a web app can be downloaded and accessed by clients. Be careful what is included in these files. 
+Any resource that is part of the front end can be examined by dowloaded and viewed by clients. Be careful what is included in these files. This could be viewed as code, comments, or assets.
