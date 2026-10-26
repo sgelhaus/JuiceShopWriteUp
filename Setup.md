@@ -1,10 +1,15 @@
 ## Network 
 
 Kali 10.0.2.3
+
 Nat Network named NatNetwork
+
 Paravirtualized adapter type 
+
 Debian 10.0.2.4
+
 Nat Network named NatNetwork
+
 Paravirtualized adapter type
 
 ## Environment
@@ -25,7 +30,7 @@ Check docker is running
 
 run the Juice Shop docker
 
-Check Juice Shop process is runnign in Docker
+Check Juice Shop process is running in Docker
 
 ```
 sudo docker --version 
