@@ -36,4 +36,43 @@ This is an example web app that does not contain any real data. In order to prev
 - Input validation used to verify the input meets application expected format.
 - Output encoding used to confirm input code is treated as text and is not interpreted to run on the browser.
 - HTML sanitization used to remove or replace elements that might cause code to be executed.
+
+## Login Jim  
+Following the interactive tutorial for guidance.  
+### Goal  
+Login as the user Jim without knowing the user account or the password.
+### Approach  
+The interactive tutorial states that the login for Jim was shared in the product reviews page. 
+See the product reviews under the menu and Customer Feedback. Jim's review is under the Green Smoothie product. 
+His email address is  
+*jim@juice-sh.op*    
+Return to the interactive tutorial and input the email address. The tutorial instructs to add '-- after the user account along with any password.
+This logs in to Jim's account.  
+### Lesson Learned  
+A web application might be vulnerable to SQL injections for input fields. In this login demonstration, suppose the SQL query is as follows  
+```
+SELECT * FROM users
+WHERE username = 'jim@juice-sh.op'
+AND password = 'qwerty';
+```
+In SQL syntax the '-- means 
+- A single quote which matched the username beginning single quote with an ending quote
+- Two hyphens used as comments 
+Place these symbols back into the SQL query looks like the following  
+```
+SELECT * FROM users
+WHERE username = 'jim@juice-sh.op'--'
+AND password = 'qwerty';
+```
+SQL interprets double hyphen as a comment. The remaining query is commented out. This leaves the SQL to soley the starting query up until the point of the comment
+```
+SELECT * FROM users
+WHERE username = 'jim@juice-sh.op'
+```
+The interpreted query finds the matching username without out matching the password. Role of the database is to return a matching record, 
+not to determine user access.
+
+Zap and sqlmap exploration to come...
+
+
   
