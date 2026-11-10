@@ -69,10 +69,8 @@ SQL interprets double hyphen as a comment. The remaining query is commented out.
 SELECT * FROM users
 WHERE username = 'jim@juice-sh.op'
 ```
-The interpreted query finds the matching username without out matching the password. Role of the database is to return a matching record, 
+The interpreted query finds the matching username without matching the password. Role of the database is to return a matching record, 
 not to determine user access.
-
-Zap and sqlmap exploration to come...
 
 
   
